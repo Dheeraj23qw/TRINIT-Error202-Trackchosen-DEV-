@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+<style>
+ 
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .mcontainer {
+           display: grid;
+           grid-template-columns: repeat(5,1fr);
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            
+        }
+        .course-card {
+            width: 250px;
+            background-color: #f9f7f7;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-family:  sans-serif;
+            font-weight: 600;
+            transition: .3s ease-in-out;
+            height: 300px;
+        }
+        .course-card:hover{
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transform: scale(1.1);
+        
+        }
+        .course-card h2 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .course-card p {
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .subscribe-button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+.subscribe-button:hover {
+    background-color: black;
+    color: white;
+}
+
+</style>
+
+
+</head>
+<body>
+    
+
+        <h1>Available Courses</h1>
+    <div class="mcontainer">
+        <% courses.forEach(course => { %>
+            <div class="course-card">
+                <h2>Course Price: <%= course.price %></h2>
+                <p>Duration: <%= course.duration %> days</p>
+                <p>Language: <%= course.language %></p>
+                <!-- Assuming User model has a name field  -->
+        
+                <p>Teaching Experience: <%= course.experience %> years</p>
+             
+                <a href='/video/<%- course._id %>'><button class="subscribe-button">subscribe</button></a>
+            </div>
+        <% }) %>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

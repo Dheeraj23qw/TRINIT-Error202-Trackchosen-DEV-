@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <style>
+        .mcontainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Adjust as needed */
+            background-color: #f0f0f0; /* Set your desired background color */
+        }
+    
+        .course-card {
+            background-color: #fff; /* Set your desired background color */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+            text-align: center;
+        }
+    
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+    
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff; /* Set your desired background color */
+            color: #fff; /* Set your desired text color */
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+    
+        a:hover {
+            background-color: #0056b3; /* Change the background color on hover */
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="mcontainer">
+        
+            <div class="course-card">
+                <div class="course-card">
+                    <h2>Hi there,Welcome to my Course</h2>
+                    <p>click on the below link</p>
+                    <a href="<%- video.link%>">Meet link</a>
+                
+                </div>
+                
+            </div>
+       
+    </div>
+</body>
+</html>

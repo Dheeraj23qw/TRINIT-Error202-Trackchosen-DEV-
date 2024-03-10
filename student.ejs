@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnIdoma</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+    <script src="https://kit.fontawesome.com/edaa44ed95.js" crossorigin="anonymous"></script>
+     <style>
+     * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+        
+    }
+    
+    body {
+        background-color:rgba(88, 76, 76, 0.261);
+       
+    }
+    
+    #moving {
+        color: #811f3e
+    }
+    
+    .firstpage {
+        width: 100%;
+        height: 100vh;
+        background-image: url("data:image/jpeg;base64,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");
+        background-size: cover;
+        background-position: center;
+    
+    }
+    
+    .container1 {
+        padding: 10px 10%;
+        color: black;
+    
+    
+    }
+    
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+    
+    }
+    
+    .logo {
+        font-size: 40px;
+    
+    }
+    
+    .logo span {
+        color: red;
+    }
+    
+    nav ul li {
+        display: inline-block;
+        list-style: none;
+        margin: 10px 20px;
+    }
+    
+    nav ul li a {
+        color: rgb(11, 5, 5);
+        text-decoration: none;
+        font-size: 17px;
+        position: relative;
+        font-weight: 700;
+    }
+    
+    nav ul li a::after {
+        content: '';
+        width: 0;
+        height: 3px;
+        bottom: -6px;
+        position: absolute;
+        background-color: rgb(30, 86, 169);
+        left: 0;
+        transition: 0.4;
+    }
+    
+    nav ul li a:hover::after {
+        width: 100%;
+    }
+    nav ul li a button:hover::after {
+        width: 0%;
+    }
+    
+    
+    .about{
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+    .about h1,h2,h3{
+        font-family: Arial, Helvetica, sans-serif;
+            color: rgb(16, 4, 4);
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 50px;
+    }
+    
+    .about h2{
+        font-size: 35px;
+        color: rgb(255, 0, 119);
+    }
+    .about h3{
+        font-size: 25px;
+        color: rgb(80, 80, 124);
+    }
+    .about p{
+        font-size: 20px;
+        line-height: 35px;
+    }
+    
+    
+    .row {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        height: 50vh;
+    }
+    
+    .social {
+        flex-basis: 35%;
+    }
+    
+    .social h1 {
+        font-size: 40px;
+    }
+    
+    .social p {
+        margin-top: 30px;
+    }
+    
+    .social p i {
+        color: red;
+        margin-right: 10px;
+        font-size: 15px;
+    }
+    
+    
+    .social-icon {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-around;
+    
+    }
+    
+    .social-icon a {
+        font-size: 30px;
+        text-decoration: none;
+        transition: transform 0.5s;
+    }
+    
+    .social-icon a:hover {
+        color: red;
+        transform: translateY(-6px);
+    
+    }
+    
+    
+    
+    
+    
+    form {
+        width: 100%;
+    }
+    
+    
+    
+    .btn2 {
+        background-color: rgba(120, 66, 66, 0.379);
+        color: white;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    
+    .links {
+        transition: transform 0.5s;
+    }
+    
+    .links:hover {
+        transform: scale(1.1);
+    
+    
+    }
+    </style>
+
+</head>
+<body>
+  <div class="firstpage" id="firstpage1">
+    <div class="container1">
+      <nav>
+        <div class="logo"> <span>LEARN</span>IDIOMA.</div>
+        <ul id="closed" class="">
+         
+          <li><a href="#home1">HOME</a></li>
+
+          <li><a href="#about1">ABOUT US</a></li>
+          <li><a href="#contact1">CONTACT US</a></li>
+          <li><a href="/signup"><button type="button" class="btn btn-primary">Sign In</button></a></li>
+
+         
+  
+      </nav>
+    
+    </div>
+  </div>
+
+
+  <div class="about" id="about1">
+    <div class="container1">
+      <div class=second-page>
+        <div class="about">
+          <h1>ABOUT US</h1>
+          <h2>Master Every Tongue :Explore,Connect,Excel!!!</h2>
+          <h3>Learn All languages just by one click</h3>
+         <p>
+           LearnIdoma website is a digital platforms designed to facilitate the learning and mastery of languages,
+          offering a diverse range of resources and tools to cater to learners of all levels and preferences. This website
+          provide an interactive and engaging environment where users can explore various languages, improve their vocabulary,
+          grammar, pronunciation, and cultural understanding through a combination of lessons, exercises, quizzes, and multimedia
+          content. Whether one seeks to learn a new language for travel, work, academic purposes, or simply personal enrichment,
+          language educational websites offer accessible and flexible learning opportunities that empower individuals to embark on
+          their linguistic journey with confidence and competence.
+         </p>
+          
+          
+        
+       </div>
+  
+  
+      </div>
+    </div>
+    <hr>
+    <div class="contact" id="contact1">
+      <div class="container1">
+        <div class="row">
+          <div class="social">
+            <h1 class="contact1"> Contact Us</h1>
+            <p><i class="fa-regular fa-envelope"></i>sumitronaldo1107@gamil.com</p>
+            <p><i class="fa-solid fa-phone"></i>91+7078897760</p>
+            <div class="social-icon">
+              <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href=""><i class="fa-brands fa-github"></i></a>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

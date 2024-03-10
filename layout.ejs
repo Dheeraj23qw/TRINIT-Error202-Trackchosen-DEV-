@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <style>
+    /* Global styles */
+    body {
+      font-family: 'Segoe UI', sans-serif; /* Use a common font for better readability */
+      margin: 0;
+      padding: 0;
+      background-color: #f7fafc; /* Light background color */
+      color: #333; /* Text color */
+    }
+
+    /* Navigation styles */
+    nav {
+      background-color: #4a90e2; /* Blue background for navigation */
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    }
+
+    nav h1 {
+      font-size: 1.8rem;
+      color: #fff; /* White text color */
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav ul li {
+      font-size: 1rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff; /* White text color */
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #f0f0f0; /* Lighter text color on hover */
+    }
+
+    /* Main content styles */
+    .container {
+      width: 80%; /* Adjust the width as needed */
+      margin: 2rem auto;
+      background-color: #fff; /* White background for main content */
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+      padding: 2rem;
+    }
+
+    /* Add a hover effect on main content */
+    .container:hover {
+      transform: translateY(-5px);
+      transition: transform 0.3s ease;
+    }
+
+  </style>
+  <title>Home Page</title>
+</head>
+<body>
+  <nav>
+    <h1>Learn IDIOMA</h1>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/signup">Create Account</a></li>
+    </ul>
+  </nav>
+  <main class="container">
+    <%- body %>
+  </main>
+</body>
+</html>

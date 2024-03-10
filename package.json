@@ -1,0 +1,29 @@
+{
+  "name": "short-url",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "tailwind:css": " npx tailwindcss -i ./public/stylesheets/tailwind.css -o ./public/stylesheets/style.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.18",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.3",
+    "express-ejs-layouts": "^2.5.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^6.12.7",
+    "nanoid": "^4.0.2",
+    "nodemon": "^2.0.22",
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0",
+    "shortid": "^2.2.16",
+    "tailwindcss": "^3.4.1",
+    "uuid": "^9.0.1"
+  }
+}
